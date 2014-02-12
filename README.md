@@ -5,4 +5,4 @@ This report introduces two tank system and a typical procedure used to design an
 
 The two tank system represented by a two tank x1 and x2, and a valve as an input u. first tank x1 receives liquid from u, then water is flowed into tank x2. The goal is to decide when to open the valves, realize what will happen in the tanks and at what time the whole system can stop. 
 
-![system](https://github.com/KifahDaher/Two-Tank-System/blob/master/two-tank%20system.png)
+![system](https://raw.github.com/KifahDaher/Two-Tank-System/master/two-tank%20system.png)
