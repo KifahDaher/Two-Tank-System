@@ -1,0 +1,73 @@
+[System]
+Name='TwoTankFC2sugeno'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='x1'
+Range=[0 70]
+NumMFs=5
+MF1='nl':'trapmf',[0 0 35 40]
+MF2='p1':'trapmf',[35 40 45 50]
+MF3='p2':'trapmf',[45 50 55 60]
+MF4='p3':'trapmf',[55 60 65 70]
+MF5='p4':'trapmf',[65 70 70 70]
+
+[Input2]
+Name='x2'
+Range=[-70 70]
+NumMFs=5
+MF1='n1':'trapmf',[-70 -70 0 10]
+MF2='nl':'trimf',[0 0 20]
+MF3='p1':'trimf',[0 10 30]
+MF4='p2':'trimf',[10 20 40]
+MF5='p3':'trapmf',[20 30 70 70]
+
+[Output1]
+Name='FC2'
+Range=[0 1]
+NumMFs=9
+MF1='nl':'linear',[0 0 0]
+MF2='p1':'linear',[1.25 1.25 1.25]
+MF3='p2':'linear',[2.5 2.5 2.5]
+MF4='p3':'linear',[3.75 3.75 3.75]
+MF5='p4':'linear',[5 5 5]
+MF6='p5':'linear',[6.25 6.25 6.25]
+MF7='p6':'linear',[7.5 7.5 7.5]
+MF8='p7':'linear',[8.75 8.75 8.75]
+MF9='p8':'linear',[10 10 10]
+
+[Rules]
+1 5, 9 (1) : 1
+1 4, 8 (1) : 1
+1 3, 8 (1) : 1
+1 2, 5 (1) : 1
+1 1, 1 (1) : 1
+2 5, 8 (1) : 1
+2 4, 7 (1) : 1
+2 3, 6 (1) : 1
+2 2, 4 (1) : 1
+2 1, 1 (1) : 1
+3 5, 6 (1) : 1
+3 4, 5 (1) : 1
+3 3, 4 (1) : 1
+3 2, 3 (1) : 1
+3 1, 1 (1) : 1
+4 5, 4 (1) : 1
+4 4, 4 (1) : 1
+4 3, 3 (1) : 1
+4 2, 2 (1) : 1
+4 1, 1 (1) : 1
+5 5, 1 (1) : 1
+5 4, 1 (1) : 1
+5 3, 1 (1) : 1
+5 2, 1 (1) : 1
+5 1, 1 (1) : 1
